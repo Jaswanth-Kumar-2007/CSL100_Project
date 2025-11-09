@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Scheduler : Add Task</title>
+    </head>
+    <style>
+        table{
+            margin:0%;
+        }
+    </style>
+    <body>
+        <header>
+            <h1>Update Task</h1>
+        </header>
+        <div class="box">
+            <form class="schedule" action="/update/{{task.id}}" method="POST">
+                <label>Enter Your Task: </label><br><br>
+                <input type="text" name="content" id="content" value={{task.content}} placeholder="Enter your Text"><br><br>
+                <label>Enter Your Topic: </label><br><br>
+                <input type="text" name="topic" id="topic" value={{task.topic}} placeholder="Enter your Topic"><br><br>
+                <label>Assigned by: </label>
+                <input type="text" name="assigne" value={{task.assigne}} placeholder="Enter your Assigne">
+                <label>Description: </label>
+                <textarea name="description" rows="5" cols="50"  placeholder="Enter your Description.....">{{task.description}}</textarea><br><br><br>
+                <label>Enter your Progress: </label><br><br>
+                <select name="progress" value="{{task.progress}}">
+                    <option value="Not Started">Not Started</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Completed">Completed</option>
+                </select>
+                <label>Assigned on:</label><br><br>
+                <input type="date" name="assignon" value="{{task.assignon}}"><br><br>
+                <label>Enter your Priority: </label><br><br>
+                <select name="priority" value="{{task.priority}}">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <br><br>
+                <label>Set DeadLine: </label><br><br>
+                <input type="date" name="deadline" value="{{task.deadline}}"><br><br>
+                <input type="submit" name="submit">
+            </form>
+        </div>
+    </body>
+</html>

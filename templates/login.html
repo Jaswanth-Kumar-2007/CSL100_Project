@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Schedule Tracker : Login</title>
+        <meta charset="utf-8">
+        <style>
+           *{
+                margin:0%;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            #main-header{
+                position:fixed;
+                text-align: center;
+                background-color: black;
+                color:white;
+                margin:0%;
+                width:100%;
+                padding: 10px 10px;
+                top:0;
+            }
+            body{
+                background-image: url("https://i.pinimg.com/originals/3f/82/40/3f8240fa1d16d0de6d4e7510b43b37ba.gif");
+                background-position: center;
+                height:100%;
+            }
+            .container{
+                color:black;
+                justify-content: center;
+                align-items: center;
+                height:100%;
+                margin-top:5cm;
+                margin-bottom:5cm;
+                margin-left:17cm;
+                margin-right:10cm;
+            }
+            .box{
+                background-color:#FF6347;
+                opacity:0.5;
+                width: 270px;
+                height: 270px;
+                justify-content: center;
+                align-items: center;
+                border-radius: 5%;
+                transition-property: opacity;
+                transition-duration: 1s;
+            }
+            .box:hover{
+                opacity:1;
+
+            }
+            .box h2{
+                text-align: center;
+                color:black;
+                text-decoration: underline;
+                size: 20px;
+            }
+            .box label{
+                margin-left: -90px;
+            }
+            .box input[type="submit"]{
+                background-color: black;
+                color:white;
+            }
+            .box input[type="submit"]:hover{
+                background-color: white;
+                color:black;
+            }
+            .box p{
+                text-align: center;
+            }
+            #main-login{
+                text-align: center;
+            }
+            #main-footer{
+                text-align: center;
+                background-color: black;
+                color:white;
+                margin:0%;
+                position:fixed;
+                width:100%;
+                padding:10px 10px;
+                bottom:0;
+            }
+        </style>
+    </head>
+    <body>
+        <header id="main-header">
+            <h1>Schedule Tracker ⏰</h1>
+        </header>
+        <body>
+            <div class="container">
+                <div class="box">
+                    <br>
+                    <h2>Login</h2>
+                    <br>
+                    <form id="main-login" action="/" method="POST">
+                        <label>User ID:</label><br>
+                        <input type="text" name="userid" id="userid" placeholder="Enter your User ID" required>
+                        <br>
+                        <br>
+                        <label>Password:</label><br>
+                        <input type="text" name="password" id="password" placeholder="Enter your Password" required>
+                        <br>
+                        <br>
+                        <input type="submit" name="submit" value="submit">
+                    </form>
+                    <br>
+                    <p>New User ?<a href="{{url_for('register')}}">Register Here</a></p>
+                </div>
+            </div>
+        <footer id="main-footer">
+            <h2>Made by Jaswanth Kumar with ❤️</h2>
+            <p>&copy; All CopyRights Reserved</p>
+        </footer>
+    </body>
+</html>

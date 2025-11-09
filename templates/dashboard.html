@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Schedule Tracker</title>
+    <meta charset="utf-8">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #FF6347;
+            height: 100vh;
+        }
+        header {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 18px 10px;
+        }
+        header h1 {
+            text-decoration: underline;
+        }
+        nav {
+            background-color: black;
+            text-align: right;
+            padding: 5px;  
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            background-color: #FF6347;
+            padding: 30px 40px;
+        }
+        main h1 {
+            margin-bottom: 15px;
+        }
+        main p {
+            line-height: 1.5;
+            font-size: 16px;
+        }
+        main a {
+            color: white;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        .container {
+            color: white;
+            padding: 40px 0;
+            margin: 24px auto;
+        }
+        .box {
+            background-color: white;
+            opacity:0.1;
+            color: black;
+            width: 350px;
+            border-radius: 10px;
+            margin: 20px 17cm;
+            padding: 25px;
+            text-align: center;
+            transition-property: opacity;
+        }
+        .box:hover{
+            opacity:1;
+        }
+        .box img {
+            width: 64px;
+            margin: 10px auto;
+        }
+        .box h2 {
+            text-decoration: underline;
+            margin-bottom: 15px;
+        }
+        .box h3 {
+            margin: 12px 0;
+        }
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 15px 10px;
+            bottom:0;
+            margin-top: auto;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Schedule Tracker ⏰</h1>
+    </header>
+    <div id="nav">
+        <nav>
+            <a href="{{url_for('index')}}">Scheduler</a>
+            <a href="{{url_for('personalnotes')}}">Personal Notes</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </nav>
+    </div>
+    <main>
+        <h1>Welcome to Schedule Tracker, {{ user.name }}</h1>
+        <p>
+            This website provides many options such as <b>Task Tracking</b>, <b>Note Making</b>, and <b>Pomodoro Timer</b>.
+            It is mainly designed to help track your productivity and progress.<br><br>
+            <a href="#">Read More</a>
+        </p>
+    </main>
+
+    <div class="container">
+        <div class="box">
+            <h2>Profile</h2>
+            <img src="https://cdn3.iconfinder.com/data/icons/business-two-tone-1/32/User-512.png" alt="user">
+            <h3><b>Name:</b> {{ user.name }}</h3>
+            <h3><b>User-ID:</b> {{ user.userid }}</h3>
+        </div>
+    </div>
+    <footer>
+        <h2>Made by Jaswanth Kumar with ❤️</h2>
+        <p>&copy; All CopyRights Reserved</p>
+    </footer>
+</body>
+</html>

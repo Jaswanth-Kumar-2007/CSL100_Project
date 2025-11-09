@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Personal Diary : Update</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <header>Update Personal Diary</header>
+        <form class="note" action="/upd/{{note.id}}" method="POST">
+            <label>Enter Your Task: </label><br><br>
+            <textarea type="text" name="updanote" rows="10" cols="100" >{{note.note_text}}</textarea><br><br>
+            <input type="submit">
+        </form>
+    </body>
+</html>
