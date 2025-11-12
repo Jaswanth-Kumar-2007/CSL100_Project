@@ -3,6 +3,7 @@
 <head>
     <title>Schedule Tracker</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         * {
             margin: 0;
@@ -37,26 +38,24 @@
         nav a:hover {
             text-decoration: underline;
         }
-        main {
-            background-color: #FF6347;
-            padding: 30px 40px;
-        }
-        main h1 {
+        #main-text h1 {
             margin-bottom: 15px;
         }
-        main p {
+        #main-text p {
             line-height: 1.5;
             font-size: 16px;
         }
-        main a {
+        #main-text a {
             color: white;
             text-decoration: underline;
             font-weight: bold;
         }
         .container {
+            display:grid;
+            min-height: max-content;
+            grid-template-columns: 3fr 1fr;
             color: white;
             padding: 40px 0;
-            margin: 24px auto;
         }
         .box {
             background-color: white;
@@ -64,7 +63,6 @@
             color: black;
             width: 350px;
             border-radius: 10px;
-            margin: 20px 17cm;
             padding: 25px;
             text-align: center;
             transition-property: opacity;
@@ -105,16 +103,15 @@
             <a href="{{ url_for('logout') }}">Logout</a>
         </nav>
     </div>
-    <main>
-        <h1>Welcome to Schedule Tracker, {{ user.name }}</h1>
-        <p>
-            This website provides many options such as <b>Task Tracking</b>, <b>Note Making</b>, and <b>Pomodoro Timer</b>.
-            It is mainly designed to help track your productivity and progress.<br><br>
-            <a href="#">Read More</a>
-        </p>
-    </main>
-
     <div class="container">
+        <div id="main-text">
+            <h1>Welcome to Schedule Tracker, {{ user.name }}</h1>
+            <p>
+                This website provides many options such as <b>Task Tracking</b>, <b>Note Making</b>, and <b>Pomodoro Timer</b>.
+                It is mainly designed to help track your productivity and progress.<br><br>
+                <a href="#">Read More</a>
+            </p>
+        </div>
         <div class="box">
             <h2>Profile</h2>
             <img src="https://cdn3.iconfinder.com/data/icons/business-two-tone-1/32/User-512.png" alt="user">
