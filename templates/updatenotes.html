@@ -64,7 +64,7 @@
                 bottom:0;
                 position:fixed;
                 width:100%;
-                margin-top: 20px;
+                margin-top: 30px;
             }
         </style>
     </head>
@@ -79,7 +79,7 @@
                 <form class="note" action="/upd/{{note.id}}" method="POST">
                     <br><br>
                     <label><b>Enter Your Task: </b></label><br><br>
-                    <textarea type="text" name="updanote" rows="25" cols="100">{{note.note_text}}</textarea><br><br>
+                    <textarea type="text" name="updanote" rows="25" cols="75">{{note.note_text}}</textarea><br><br>
                     <input type="submit" name="submit" id="submit">
                     <br><br>
                 </form>
