@@ -3,44 +3,104 @@
     <head>
         <title>Scheduler : Add Task</title>
     </head>
-    <style>
-        table{
-            margin:0%;
-        }
-    </style>
+        <style>
+            *{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            header{
+                text-align: center;
+                text-decoration: underline;
+                background-color: black;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: larger;
+                color:white;
+                padding:1px 1px;
+                margin: 0%;
+                top: 0;
+            }
+            header h1{
+                margin-left: -80px;
+            }
+            nav {
+                background-color: black;
+                text-align: right;
+                padding: 10px 20px;
+            }
+            nav a {
+                color: white;
+                text-decoration: none;
+                margin-left: 20px;
+                font-weight: bold;
+            }
+            nav a:hover {
+                text-decoration: underline;
+            }
+            body{
+                margin:0%;
+                background-color: #FF6347;
+            }
+            .Box{
+                display: flex;
+                border: 1px solid black;
+                width: 80vh;
+                margin-top: 30px;
+                margin-left:12cm;
+                align-items: center;
+                justify-content: center;
+            }
+            form{
+                justify-content: center;
+                flex-direction: column ;
+                align-items: center;
+                text-align: center;
+            }
+            footer{
+                background-color: black;
+                color:white;
+                text-align: center;
+                margin-top: 16px;
+                margin-bottom: 0;
+                padding: 1px;
+            }
+        </style>
     <body>
         <header>
             <h1>Update Task</h1>
         </header>
-        <div class="box">
+        <nav>
+            <a href="{{url_for('index')}}">Return to Scheduler</a>
+        </nav>
+        <div class="Box">
             <form class="schedule" action="/update/{{task.id}}" method="POST">
-                <label>Enter Your Task: </label><br><br>
-                <input type="text" name="content" id="content" value={{task.content}} placeholder="Enter your Text"><br><br>
-                <label>Enter Your Topic: </label><br><br>
-                <input type="text" name="topic" id="topic" value={{task.topic}} placeholder="Enter your Topic"><br><br>
-                <label>Assigned by: </label>
-                <input type="text" name="assigne" value={{task.assigne}} placeholder="Enter your Assigne">
-                <label>Description: </label>
-                <textarea name="description" rows="5" cols="50"  placeholder="Enter your Description.....">{{task.description}}</textarea><br><br><br>
-                <label>Enter your Progress: </label><br><br>
+                <label>Enter Your Task: </label><br>
+                <input type="text" name="content" id="content" value={{task.content}} ><br><br>
+                <label>Enter Your Topic: </label><br>
+                <input type="text" name="topic" id="topic" value={{task.topic}} ><br><br>
+                <label>Assigned by: </label><br>
+                <input type="text" name="assigne" value={{task.assigne}} ><br><br>
+                <label>Description: </label><br>
+                <textarea name="description" rows="5" cols="50"  placeholder="Enter your Description.....">{{task.description}}</textarea><br><br>
+                <label>Enter your Progress: </label><br>
                 <select name="progress" value="{{task.progress}}">
                     <option value="Not Started">Not Started</option>
                     <option value="In Progress">In Progress</option>
                     <option value="Completed">Completed</option>
-                </select>
-                <label>Assigned on:</label><br><br>
+                </select><br><br>
+                <label>Assigned on:</label><br>
                 <input type="date" name="assignon" value="{{task.assignon}}"><br><br>
-                <label>Enter your Priority: </label><br><br>
+                <label>Enter your Priority: </label><br>
                 <select name="priority" value="{{task.priority}}">
                     <option value="low">Low</option>
                     <option value="medium">Medium</option>
                     <option value="high">High</option>
-                </select>
-                <br><br>
-                <label>Set DeadLine: </label><br><br>
+                </select><br><br>
+                <label>Set DeadLine: </label><br>
                 <input type="date" name="deadline" value="{{task.deadline}}"><br><br>
-                <input type="submit" name="submit">
+                <input type="submit" name="submit"><br><br>
             </form>
         </div>
+        <footer>
+            <h2>Made by Jaswanth Kumar with ❤️</h2>
+        </footer>
     </body>
 </html>
