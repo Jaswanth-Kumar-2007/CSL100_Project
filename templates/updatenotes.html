@@ -60,12 +60,11 @@
                 background-color: black;
                 color: white;
                 text-align: center;
-                padding: 15px 10px;
+                padding: 1px 1px;
                 bottom:0;
                 position:fixed;
                 width:100%;
-                margin-top: auto;
-                margin: auto;
+                margin-top: 20px;
             }
         </style>
     </head>
@@ -80,7 +79,7 @@
                 <form class="note" action="/upd/{{note.id}}" method="POST">
                     <br><br>
                     <label><b>Enter Your Task: </b></label><br><br>
-                    <textarea type="text" name="updanote" rows="25" cols="100" >{{note.note_text}}</textarea><br><br>
+                    <textarea type="text" name="updanote" rows="25" cols="100">{{note.note_text}}</textarea><br><br>
                     <input type="submit" name="submit" id="submit">
                     <br><br>
                 </form>
