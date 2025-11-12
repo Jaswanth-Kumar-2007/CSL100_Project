@@ -37,13 +37,24 @@
                 margin:0%;
                 background-color: #FF6347;
             }
+            .container{
+                margin-top: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
             .noteform{
                 border: 1px solid black;
-                margin-top: 40px;
-                margin-left: 12cm;
-                margin-bottom: 60px;    
                 width: 20cm;
                 text-align: center;
+            }
+            form #submit{
+                background-color: white;
+                color:black;
+            }
+            form #submit:hover{
+                background-color: black;
+                color:white;
             }
             footer {
                 background-color: black;
@@ -51,6 +62,8 @@
                 text-align: center;
                 padding: 15px 10px;
                 bottom:0;
+                position:fixed;
+                width:100%;
                 margin-top: auto;
                 margin: auto;
             }
@@ -60,13 +73,18 @@
         <header><h1>Update Personal Diary</h1></header>
         <nav>
             <a href="{{url_for('personalnotes')}}">Return to Personal Diary</a>
+            <a href="{{url_for('logout')}}">Logout</a>
         </nav>
-        <div class="noteform">
-            <form class="note" action="/upd/{{note.id}}" method="POST">
-                <label>Enter Your Task: </label><br><br>
-                <textarea type="text" name="updanote" rows="25" cols="100" >{{note.note_text}}</textarea><br><br>
-                <input type="submit">
-            </form>
+        <div class="container">
+            <div class="noteform">
+                <form class="note" action="/upd/{{note.id}}" method="POST">
+                    <br><br>
+                    <label><b>Enter Your Task: </b></label><br><br>
+                    <textarea type="text" name="updanote" rows="25" cols="100" >{{note.note_text}}</textarea><br><br>
+                    <input type="submit" name="submit" id="submit">
+                    <br><br>
+                </form>
+            </div>
         </div>
         <footer><h2>Made By Jaswanth Kumar with ❤️</h2></footer>
     </body>

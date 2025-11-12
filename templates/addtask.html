@@ -19,13 +19,10 @@
                 margin: 0%;
                 top: 0;
             }
-            header h1{
-                margin-left: -80px;
-            }
             nav {
                 background-color: black;
                 text-align: right;
-                padding: 10px 20px;
+                padding: 1px 2px;
             }
             nav a {
                 color: white;
@@ -40,11 +37,15 @@
                 margin:0%;
                 background-color: #FF6347;
             }
+            .container{
+                margin-top: 15px;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+            }
             .Box{
                 border: 1px solid black;
                 width: 80vh;
-                margin-top: 30px;
-                margin-left:12cm;
                 align-items: center;
                 justify-content: center;
             }
@@ -52,12 +53,21 @@
                 align-items: center;
                 text-align: center;
             }
+            form #submit{
+                background-color: white;
+                color:black;
+            }
+            form #submit:hover{
+                background-color: black;
+                color:white;
+            }
             footer{
                 background-color: black;
                 color:white;
                 text-align: center;
-                margin-top: 16px;
-                margin-bottom: 0;
+                bottom:0;
+                position: fixed;
+                width:100%;
                 padding: 1px;
             }
         </style>
@@ -68,37 +78,40 @@
         </header>
         <nav>
             <a href="{{url_for('index')}}">Return to Scheduler</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
         </nav>
-        <div class="Box">
-            <form class="schedule" action="/addtask" method="POST">
-                <br><br>
-                <label>Enter Your Task: </label><br>
-                <input type="text" name="todo" id="todo" placeholder="Enter your Text" required><br><br>
-                <label>Enter Your Topic: </label><br>
-                <input type="text" name="topic" id="topic" placeholder="Enter your Topic"><br><br>
-                <label>Assigned by: </label><br>
-                <input type="text" name="assigne" placeholder="Enter your Assigne"><br><br>
-                <label>Description: </label><br>
-                <textarea name="description" rows="5" cols="50" placeholder="Enter your Description....."></textarea><br><br>
-                <label>Enter your Progress: </label><br>
-                <select name="progress" required>
-                    <option value="Not Started">Not Started</option>
-                    <option value="In Progress">In Progress</option>
-                    <option value="Completed">Completed</option>
-                </select><br><br>
-                <label>Assigned on:</label><br>
-                <input type="date" name="assignon" required><br><br>
-                <label>Enter your Priority: </label><br>
-                <select name="priority">
-                    <option value="low">Low</option>
-                    <option value="medium">Medium</option>
-                    <option value="high">High</option>
-                </select>
-                <br><br>
-                <label>Set DeadLine: </label><br>
-                <input type="date" name="deadline"><br><br>
-                <input type="submit" name="submit"><br><br>
-            </form>
+        <div class="container">
+            <div class="Box">
+                <form class="schedule" action="/addtask" method="POST">
+                    <br><br>
+                    <label><b>Enter Your Task: </b></label><br>
+                    <input type="text" name="todo" id="todo" placeholder="Enter your Text" required><br><br>
+                    <label><b>Enter Your Topic: </b></label><br>
+                    <input type="text" name="topic" id="topic" placeholder="Enter your Topic"><br><br>
+                    <label><b>Assigned by: </b></label><br>
+                    <input type="text" name="assigne" placeholder="Enter your Assigne"><br><br>
+                    <label><b>Description: </b></label><br>
+                    <textarea name="description" rows="5" cols="50" placeholder="Enter your Description....."></textarea><br><br>
+                    <label><b>Enter your Progress: </b></label><br>
+                    <select name="progress" required>
+                        <option value="Not Started">Not Started</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Completed">Completed</option>
+                    </select><br><br>
+                    <label><b>Assigned on: </b></label><br>
+                    <input type="date" name="assignon" required><br><br>
+                    <label><b>Enter your Priority: </b></label><br>
+                    <select name="priority">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                    <br><br>
+                    <label><b>Set DeadLine: </b></label><br>
+                    <input type="date" name="deadline"><br><br>
+                    <input type="submit" name="submit" id="submit"><br><br>
+                </form>
+            </div>
         </div>
         <footer>
             <h2>Made by Jaswanth Kumar with ❤️</h2>

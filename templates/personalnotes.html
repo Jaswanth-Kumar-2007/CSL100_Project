@@ -38,16 +38,20 @@
             margin:0%;
             background-color: #FF6347;
         }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content:center;
+            flex-direction: column;
+        }
         .noteform{
             border: 1px solid black;
-            margin-top: 40px;
-            margin-left: 12cm;
+            margin-top: 40px;   
             width: 20cm;
             text-align: center;
         }
         .notetable{
             margin-top: 40px;
-            margin-left: 12cm;
             height:52vh;
         }
         table,tr{
@@ -62,11 +66,21 @@
             padding:10px;
             border: 1px solid black;
         }
+        form #submit{
+            background-color: white;
+            color:black;
+        }
+        form #submit:hover{
+            background-color: black;
+            color:white;
+        }
         footer {
             background-color: black;
             color: white;
             text-align: center;
             padding: 15px 10px;
+            position: fixed;
+            width:100%;
             bottom:0;
             margin-top: auto;
             margin: auto;
@@ -80,34 +94,36 @@
             <a href="{{url_for('dashboard')}}">Return to Dashboard</a>
             <a href="{{url_for('logout')}}">LogOut</a>
         </nav>
-        <div class="noteform">
-            <form class="schedule" action="/personalnotes" method="POST">
-                <br>
-                <label><b>Enter Your Notes: <b></b></label><br><br>
-                <textarea name="notes" rows="25" cols="100" placeholder="Enter your notes here....."></textarea><br><br><br>
-                <input type="submit" name="submit"><br><br>
-            </form>
-        </div>
-        <br>
-        <br>
-        <div class="notetable">
-            <table>
-                <tr>
-                    <th>Content</th>
-                    <th>Date Created</th>
-                    <th>Changes</th>
-                </tr>
-                {% for note in notes %}
-                <tr>
-                    <td>{{note.note_text}}</td>
-                    <td>{{note.date_created.date()}}</td>
-                    <td>
-                        <a href="/del/{{note.id}}">Delete</a>
-                        <a href="/upd/{{note.id}}">Update</a>
-                    </td>
-                </tr>
-                {% endfor %}
-            </table>
+        <div class="container">
+            <div class="noteform">
+                <form class="schedule" action="/personalnotes" method="POST">
+                    <br>
+                    <label><b>Enter Your Notes: <b></b></label><br><br>
+                    <textarea name="notes" rows="25" cols="100" placeholder="Enter your notes here....."></textarea><br><br><br>
+                    <input type="submit" name="submit" id="submit"><br><br>
+                </form>
+            </div>
+            <br>
+            <br>
+            <div class="notetable">
+                <table>
+                    <tr>
+                        <th>Content</th>
+                        <th>Date Created</th>
+                        <th>Changes</th>
+                    </tr>
+                    {% for note in notes %}
+                    <tr>
+                        <td>{{note.note_text}}</td>
+                        <td>{{note.date_created.date()}}</td>
+                        <td>
+                            <a href="/del/{{note.id}}">Delete</a>
+                            <a href="/upd/{{note.id}}">Update</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
         </div>
     </body>
     <footer>

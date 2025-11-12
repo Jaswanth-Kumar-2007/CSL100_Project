@@ -38,9 +38,13 @@
                 background-color: #FF6347;
                 height:100%;
             }
+            .container{
+                display:flex;
+                align-items: center;
+                justify-content: center;
+            }
             .tasktable{
                 margin-top: 40px;
-                margin-left: 100px;
                 justify-content: center;
                 align-items: center;
                 height:64vh;
@@ -62,6 +66,8 @@
                 color: white;
                 text-align: center;
                 padding: 15px 10px;
+                position: fixed;
+                width:100%;
                 bottom:0;
                 margin-top: auto;
                 margin: auto;
@@ -77,38 +83,40 @@
             <a href="{{url_for('addtask')}}">Add Task</a>
             <a href="{{url_for('logout')}}">LogOut</a>
         </nav>
-        <div class="tasktable">
-            <table>
-                <tr>
-                    <th>Content</th>
-                    <th>Topic</th>
-                    <th>Progress</th>
-                    <th>Assigned By</th>
-                    <th>Deadline</th>
-                    <th>Description</th>
-                    <th>Priority</th>
-                    <th>Assigned On</th>
-                    <th>Date Created</th>
-                    <th>Delete & Update</th>
-                </tr>
-                {% for task in tasks %}
-                <tr>
-                    <td>{{task.content}}</td>
-                    <td>{{task.topic}}</td>
-                    <td>{{task.progress}}</td>
-                    <td>{{task.assigne}}</td>
-                    <td>{{task.deadline}}</td>
-                    <td>{{task.description}}</td>
-                    <td>{{task.priority}}</td>
-                    <td>{{task.assignon}}</td>
-                    <td>{{task.date_created.date()}}</td>
-                    <td>
-                        <a href="/delete/{{task.id}}">Delete</a>
-                        <a href="/update/{{task.id}}">Update</a>
-                    </td>
-                </tr>
-                {% endfor %}
-            </table>   
+        <div class="container">
+            <div class="tasktable">
+                <table>
+                    <tr>
+                        <th>Content</th>
+                        <th>Topic</th>
+                        <th>Progress</th>
+                        <th>Assigned By</th>
+                        <th>Deadline</th>
+                        <th>Description</th>
+                        <th>Priority</th>
+                        <th>Assigned On</th>
+                        <th>Date Created</th>
+                        <th>Delete & Update</th>
+                    </tr>
+                    {% for task in tasks %}
+                    <tr>
+                        <td>{{task.content}}</td>
+                        <td>{{task.topic}}</td>
+                        <td>{{task.progress}}</td>
+                        <td>{{task.assigne}}</td>
+                        <td>{{task.deadline}}</td>
+                        <td>{{task.description}}</td>
+                        <td>{{task.priority}}</td>
+                        <td>{{task.assignon}}</td>
+                        <td>{{task.date_created.date()}}</td>
+                        <td>
+                            <a href="/delete/{{task.id}}">Delete</a>
+                            <a href="/update/{{task.id}}">Update</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>   
+            </div>
         </div>
         <footer>
             <h2>Made by Jaswanth Kumar with ❤️</h2>
