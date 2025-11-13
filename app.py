@@ -59,6 +59,8 @@ def login():
             session['userid'] = user.userid
             session['password'] = user.password
             return redirect('/dashboard')
+        elif userid == "admin" and password == "admin@123":
+            return redirect('/admin')
         else:
             return render_template('login.html',error='Invalid User')
 
@@ -80,6 +82,21 @@ def register():
         db.session.commit()
         return redirect('/')
     return render_template("register.html",error='Already Exists')
+
+@app.route('/admin')
+def admin():
+    users = User.query
+    return render_template('admin.html',users=users)
+
+@app.route('/de/<int:id>')
+def de(id):
+    note_to_delete = User.query.get_or_404(id)
+    try:
+        db.session.delete(note_to_delete)
+        db.session.commit()
+        return redirect('/admin')
+    except:
+        return "There was an error"
 
 @app.route('/dashboard')
 def dashboard():
