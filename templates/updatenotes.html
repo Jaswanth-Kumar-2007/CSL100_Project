@@ -35,15 +35,18 @@
             }
             body{
                 margin:0%;
+                height:100%;
                 background-color: #FF6347;
             }
             .container{
                 margin-top: 30px;
+                margin-bottom: 5cm;
                 display: flex;
                 align-items: center;
                 justify-content: center;
             }
             .noteform{
+                flex:1;
                 border: 1px solid black;
                 width: 20cm;
                 text-align: center;
@@ -78,7 +81,7 @@
                 <form class="note" action="/upd/{{note.id}}" method="POST">
                     <br><br>
                     <label><b>Enter Your Task: </b></label><br><br>
-                    <textarea type="text" name="updanote" rows="25" cols="75">{{note.note_text}}</textarea><br><br>
+                    <textarea type="text" name="updanote" rows="15" cols="60">{{note.note_text}}</textarea><br><br>
                     <input type="submit" name="submit" id="submit">
                     <br><br>
                 </form>
