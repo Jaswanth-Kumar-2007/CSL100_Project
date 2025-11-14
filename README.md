@@ -12,6 +12,14 @@ https://csl100-project.onrender.com/
 
 ---
 
+## 🎥 Demo
+
+<p align="center">
+  <img src="assets/demo.gif" alt="Project Demo" width="70%">
+</p>
+
+---
+
 ## 🛠️ Tech Stack
 
 <p>
