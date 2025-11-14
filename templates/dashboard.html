@@ -75,10 +75,13 @@
             border-radius: 10px;
             padding: 25px;
             text-align: center;
-            transition-property: opacity;
+            transition-property: opacity,transform,color,background-color;
         }
         .box:hover{
             opacity:1;
+            transform:translateY(-10px);
+            background-color: black;
+            color:white;
         }
         .box img {
             width: 64px;
@@ -108,6 +111,7 @@
     </header>
     <div id="nav">
         <nav>
+            <a href="{{url_for('studytemplate')}}">Sample Plan</a>
             <a href="{{url_for('index')}}">Scheduler</a>
             <a href="{{url_for('personalnotes')}}">Personal Notes</a>
             <a href="{{ url_for('logout') }}">Logout</a>
@@ -116,9 +120,10 @@
     <div id="main-text">
         <h1>Welcome to Schedule Tracker, {{ user.name }}</h1>
         <p>
-            This website provides many options such as <b>Task Tracking</b>, <b>Note Making</b>, and <b>Pomodoro Timer</b>.
-            It is mainly designed to help track your productivity and progress.<br><br>
-            <a href="#">Read More</a>
+            This website provides many options such as<b> Task Tracking, Note Making, and a Pomodoro Timer. </b><br>
+            It is mainly designed to help track your productivity and progress.<br>
+            You can organize your daily work, set priorities, and stay consistent with your goals.
+            Everything is built to make your routine smoother and more efficient.<br>
         </p>
     </div>
     <div class="container">

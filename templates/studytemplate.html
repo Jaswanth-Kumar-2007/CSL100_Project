@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Daily Routine</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, Helvetica, sans-serif;
+                box-sizing: border-box;
+            }
+            body {
+                background-color: #FF6347;
+                min-height: 100vh;
+                width: 100%;
+            }
+            header {
+                background-color: #000;
+                color: white;
+                text-align: center;
+                padding: 20px 10px;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            }
+            header h1 {
+                text-decoration: underline;
+                letter-spacing: 2px;
+            }
+            nav {
+                background-color: #000;
+                text-align: right;
+                padding: 8px 15px;
+            }
+            nav a {
+                color: white;
+                text-decoration: none;
+                margin-left: 25px;
+                font-weight: bold;
+                transition: color 0.2s ease;
+            }
+            nav a:hover {
+                color: #FF6347;
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 30px 10px;
+                gap: 25px;
+            }
+            .box {
+                width: 90%;
+                max-width: 700px;
+                background-color: black;
+                padding: 18px 22px;
+                border-radius: 12px;
+                border: none;
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+            }
+            .box:hover {
+                transform: translateY(-8px);
+            }
+            .box h3 {
+                margin-bottom: 10px;
+                color:#FF6347;
+                font-size: 20px;
+            }
+            .box h4 {
+                margin: 8px 0;
+                color:#FF6347;
+                font-weight: 600;
+            }
+            .box ul {
+                margin-left: 20px;
+                margin-bottom: 5px;
+            }
+            .box ul li {
+                margin: 4px 0;
+                font-size: 15px;
+                color: #FF6347;
+            }
+            footer {
+                background-color: black;
+                color: white;
+                text-align: center;
+                width:100%;
+                padding: 15px 10px;
+                bottom:0;
+                margin:0;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>✅ Daily Routine</h1>
+        </header>
+        <nav>
+            <a href="{{url_for('dashboard')}}">Dashboard</a>
+        </nav>
+        <div class="container">
+            <div class="box">
+                <h3>Morning (6:00 AM - 9:00 AM)</h3>
+                <h4>6:00 - 6:30 AM → Wake up, freshen up</h4>
+                <h4>6:30 - 7:00 AM → Light workout / yoga / walk</h4>
+                <h4>7:00 - 7:30 AM → Breakfast</h4>
+                <h4>7:30 - 9:00 AM → Deep Work / Study (Most Focused Time)</h4>
+            </div>
+            <div class="box">
+                <h3>Daytime (9:00 AM - 1:00 PM)</h3>
+                <h4>9:00 - 12:00PM → Classes / Study sessions / Office work / online work / coding</h4>
+                <h4>12:00 - 1:00 → Lunch break</h4>
+            </div>
+            <div class="box">
+                <h3>Afternoon (1:00 PM - 5:30 PM)</h3>
+                <h4>1:00 - 3:00 PM</h4>
+                <ul>
+                    <li>Continue college work / project work / office tasks</li>
+                    <li>Medium intensity tasks</li>
+                </ul>
+                <h4>3:00 - 3:30 PM</h4>
+                <ul>
+                    <li>Break (snack, walk, stretch)</li>
+                </ul>
+                <h4>3:30 - 5:30 PM</h4>
+                <ul>
+                    <li>Productive session</li>
+                    <li>Assignments, coding projects, studying difficult topics</li>
+                    <li>Reviewing notes</li>
+                </ul>
+            </div>
+            <div class="box">
+                <h3>Evening (5:30 PM - 8:00 PM)</h3>
+                <h4>5:30 - 6:00 PM → Relax (songs, walk, small break)</h4>
+                <h4>6:00 - 7:00 PM → Study / Skill Learning</h4>
+                <h4>7:00 - 8:00 PM → Dinner + Family time</h4>
+            </div>
+            <div class="box">
+                <h3>Night (8:00 PM - 11:00 PM)</h3>
+                <h4>8:00 - 9:00 PM</h4>
+                <ul>
+                    <li>Light work</li>
+                    <li>Planning tomorrow's tasks</li>
+                </ul>
+                <h4>9:00 - 10:00 PM</h4>
+                <ul>
+                    <li>Entertainment (series / gaming / YouTube / movies)</li>
+                </ul>
+                <h4>10:00 - 10:30 PM</h4>
+                <ul>
+                    <li>Sleep Till (6:00 am)</li>
+                </ul>
+            </div>
+            <footer>
+                <h2>Made by Jaswanth Kumar with ❤️</h2>
+                <p>&copy; All CopyRights Reserved</p>
+            </footer>
+    </body>
+</html>

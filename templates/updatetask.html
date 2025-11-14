@@ -95,17 +95,17 @@
                     <textarea name="description" rows="5" cols="25"  placeholder="Enter your Description.....">{{task.description}}</textarea><br><br>
                     <label><b>Enter your Progress: </b></label><br>
                     <select name="progress" value="{{task.progress}}">
-                        <option value="Not Started">Not Started</option>
-                        <option value="In Progress">In Progress</option>
-                        <option value="Completed">Completed</option>
+                        <option value="Not Started" {% if task.progress == "Not Started" %}selected{% endif %}>Not Started</option>
+                        <option value="In Progress" {% if task.progress == "In Progress" %}selected{% endif %}>In Progress</option>
+                        <option value="Completed" {% if task.progress == "Completed" %}selected{% endif %}>Completed</option>
                     </select><br><br>
                     <label><b>Assigned on: </b></label><br>
                     <input type="date" name="assignon" value="{{task.assignon}}"><br><br>
                     <label><b>Enter your Priority: </b></label><br>
                     <select name="priority" value="{{task.priority}}">
-                        <option value="low">Low</option>
-                        <option value="medium">Medium</option>
-                        <option value="high">High</option>
+                        <option value="low" {% if task.priority == "low" %}selected{% endif %}>Low</option>
+                        <option value="medium" {% if task.priority == "medium" %}selected{% endif %}>Medium</option>
+                        <option value="high" {% if task.priority == "high" %}selected{% endif %}>High</option>
                     </select><br><br>
                     <label><b>Set DeadLine: </b></label><br>
                     <input type="date" name="deadline" value="{{task.deadline}}"><br><br>
@@ -115,6 +115,7 @@
         </div>
         <footer>
             <h2>Made by Jaswanth Kumar with ❤️</h2>
+            <p>&copy; All CopyRights Reserved</p>
         </footer>
     </body>
 </html>

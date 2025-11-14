@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: black;
+        }
+        header {
+            background-color: black;
+            text-decoration: underline;
+            color: white;
+            padding: 5px;
+            text-align: center;
+        }
+        nav {
+            background-color: black;
+            text-align: right;
+            padding: 1px;  
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            width: 90%;
+            max-width: 850px;
+            margin: 30px auto;
+        }
+        .box {
+            background: black;
+            color:white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            animation-name: myanimation;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            transition: transform 0.2s ease;
+        }
+        .box:hover{
+            transform: translateY(-8px);
+        }
+        @keyframes myanimation {
+            0% {
+                background: red;
+            }
+            12.5% {
+                background: orange;
+            }
+            25% {
+                background: yellow;
+            }
+            37.5% {
+                background: green;
+            }
+            50% {
+                background: blue;
+            }
+            62.5% {
+                background: indigo;
+            }
+            75% {
+                background: violet;
+            }
+            87.5% {
+                background: pink;
+            }
+            100% {
+                background: red;
+            }
+        }
+        .box h2 {
+            color:white;
+            margin-bottom: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .gif-box {
+            text-align: center;
+            margin-bottom: 20px;
+            color:white;
+        }
+        .gif-box img {
+            width: 80%;
+            max-width: 350px;
+            border-radius: 10px;
+        }
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            width:100%;
+            margin-top:2cm;
+            padding: 15px 10px;
+            bottom:0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📘 Resources</h1>
+    </header>
+    <nav>
+        <a href="{{url_for('login')}}">Login</a>
+        <a href="{{url_for('register')}}">Register</a>
+    </nav>
+    <div class="container">
+        <div class="box">
+            <h2>GIF Used in My Project</h2>
+            <p> # GIF used at Login and Register:  <a href="https://i.pinimg.com/originals/3f/82/40/3f8240fa1d16d0de6d4e7510b43b37ba.gif">GIF Link</a></p>
+            <div class="gif-box">
+                <img src="https://i.pinimg.com/originals/3f/82/40/3f8240fa1d16d0de6d4e7510b43b37ba.gif" alt="Login Gif">
+            </div>
+        </div>
+        <div class="box">
+            <h2>📔 HTML Learning Resources</h2>
+            <p>
+                # Beginner HTML Course:  
+                <a href="https://youtu.be/UB1O30fR-EE?si=0R6PqaOtYYYBVVGd" target="_blank">
+                    Watch HTML Tutorial
+                </a>
+            </p>
+        </div>
+        <div class="box">
+            <h2>📔 CSS Learning Resources</h2>
+            <p>
+                # Complete CSS Course:  
+                <a href="https://youtu.be/yfoY53QXEnI?si=n3dYoWvgW7X8zsj6" target="_blank">
+                    Watch CSS Tutorial
+                </a>
+            </p>
+            <p>
+                # Flexbox Mastery:  
+                <a href="https://youtu.be/JJSoEo8JSnc?si=8V6f8F4WlCsQI9Kg" target="_blank">
+                    Learn Flexbox
+                </a>
+            </p>
+            <p>
+               # Transitions and Animations:
+               <a href="https://youtu.be/zHUpx90NerM?si=oYSPBEBXhg-gtn8D" target="_blank">
+                   Learn CSS Transistions and Animations
+               </a>
+            </p>
+            <p>
+                # Overflow CSS:
+                <a href="https://youtu.be/d7cH8geV2dY?si=ugOItz74QYgrjBCZ" target="_blank">
+                    Learn CSS Overflow
+                </a>
+            </p>
+        </div>
+        <div class="box">
+            <h2>📔 Flask Learning Resources</h2>
+            <p>
+                # Flask for Beginners:  
+                <a href="https://youtu.be/Z1RJmh_OqeA?si=B62hRPRDCvpjWYxM" target="_blank">
+                    Full Flask Tutorial
+                </a>
+            </p>
+            <p>
+                # Flask App Tutorial:  
+                <a href="https://youtu.be/nZRygaTH2MA?si=rqSkj-l5TKIOF5Hp" target="_blank">
+                    Flask App Course
+                </a>
+            </p>
+            <p>
+                # Flask Documentation (Text):  
+                <a href="https://www.geeksforgeeks.org/python/flask-tutorial/" target="_blank">
+                    GeeksForGeeks Flask Guide
+                </a>
+            </p>
+        </div>
+        <div class="box">
+            <h2>For More Info</h2>
+            <p>
+                # GitHub
+                <a href="https://github.com/Jaswanth-Kumar-2007/CSL100_Project" target="_blank">
+                    Jaswanth-Kumar-2007
+                </a>
+            </p>
+        </div>
+    </div>
+    <footer>
+        <h2>Made by Jaswanth Kumar with ❤️</h2>
+        <p>&copy; All CopyRights Reserved</p>
+    </footer>
+</body>
+</html>

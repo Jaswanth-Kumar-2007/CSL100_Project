@@ -88,6 +88,14 @@ def admin():
     users = User.query
     return render_template('admin.html',users=users)
 
+@app.route('/resources')
+def resources():
+    return render_template('resources.html')
+    
+@app.route('/studytemplate')
+def studytemplate():
+    return render_template('studytemplate.html')
+
 @app.route('/de/<int:id>')
 def de(id):
     note_to_delete = User.query.get_or_404(id)
