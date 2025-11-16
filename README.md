@@ -61,50 +61,58 @@ Project Root
 ## 📂 Clickable Repository Folders & Files
 
 ### **Folders**
+
 - [templates/](https://github.com/Jaswanth-Kumar-2007/CSL100_Project/tree/main/templates)
 - [instance/](https://github.com/Jaswanth-Kumar-2007/CSL100_Project/tree/main/instance)
 - [__pycache__/](https://github.com/Jaswanth-Kumar-2007/CSL100_Project/tree/main/__pycache__)
 
 ### **Files**
+
 - [app.py](https://github.com/Jaswanth-Kumar-2007/CSL100_Project/blob/main/app.py)  
 - [requirements.txt](https://github.com/Jaswanth-Kumar-2007/CSL100_Project/blob/main/requirements.txt)
 
-
 ## ▶️ Run Locally
 
-1. Clone the repository
+1.Clone the repository
+
 ```bash
 git clone https://github.com/Jaswanth-Kumar-2007/CSL100_Project.git
 ```
 
-2. Navigate into the folder
+2.Navigate into the folder
+
 ```bash
 cd CSL100_Project
 ```
 
-3. Create virtual environment
+3.Create virtual environment
+
 ```bash
 python -m venv venv
 ```
 
-4. Activate virtual environment
+4.Activate virtual environment
 
-   Windows 
+   Windows
+
 ```bash
 venv\Scripts\Activate
 ```
+  
+  Linux/MacOs
 
-   Linux/MacOs
 ```bash
 source venv/bin/activate
 ```
 
-5. Install requirements
+5.Install requirements
+
 ```bash
 pip install requirements.txt
 ```
 
-6. Run the Flask app
+6.Run the Flask app
+
 ```bash
 python app.py
 ```
@@ -118,4 +126,3 @@ python app.py
 
 Thanks for checking out this project!  
 If you enjoyed it, don't forget to ⭐ the repository.
-

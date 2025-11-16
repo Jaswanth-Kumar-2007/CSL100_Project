@@ -94,6 +94,46 @@
         .box h3 {
             margin: 12px 0;
         }
+        .box a{
+            color:white;
+        }
+        .box a:hover{
+            color:red;
+        }
+        .container-2 {
+            display: flex;
+            flex-direction: column;
+            padding: 30px 10px;
+            gap: 25px;
+        }
+        .box-2 {
+            width: 90%;
+            max-width: 900px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color:#FF6347;
+            padding: 18px 22px;
+            border-radius: 12px;
+            border: none;
+            transition: transform,background-color;
+        }
+        .box-2:hover {
+            transform: translateY(-8px);
+            background-color:orangered;
+        }
+        .box-2 h2 {
+            margin-bottom: 10px;
+            color:black;
+            font-size: 28px;
+        }
+        .box-2 ul {
+            margin-left: 20px;
+            margin-bottom: 5px;
+        }
+        .box-2 ul li {
+            margin: 4px 0;
+            font-size: 20px;
+            color: black;
+        }
         footer {
             background-color: black;
             color: white;
@@ -121,9 +161,10 @@
         <h1>Welcome to Schedule Tracker, {{ user.name }}</h1>
         <p>
             This website provides many options such as<b> Task Tracking, Note Making, and a Pomodoro Timer. </b><br>
-            It is mainly designed to help track your productivity and progress.<br>
-            You can organize your daily work, set priorities, and stay consistent with your goals.
-            Everything is built to make your routine smoother and more efficient.<br>
+            It is mainly designed to help you in your daily tasks.<br>
+            You can keep your daily work, set priorities, and to avoid forgetting what you want to do.
+            <br><br>
+            For Usage , Scroll Down ⬇️
         </p>
     </div>
     <div class="container">
@@ -132,6 +173,34 @@
             <img src="https://cdn3.iconfinder.com/data/icons/business-two-tone-1/32/User-512.png" alt="user">
             <h3><b>Name:</b> {{ user.name }}</h3>
             <h3><b>User-ID:</b> {{ user.userid }}</h3>
+        </div>
+    </div>
+    <div class="container-2">
+        <div class="box-2">
+            <h2>Steps for Usage:</h2>
+            <br><br>    
+            <ul>
+                <li>"Sample Plan" is a Normal Basic Plan which help for a reference</li><br>
+                <li>"Scheduler" is used to add Task what you want to do or Schedule it</li>
+                <ul>
+                    <li>In Scheduler You can Add Task having multiple options</li>
+                    <li>If you completed Your Task delete it or Update it</li>
+                    <li>If you Mistaked anything or you want to change date you can update it </li>
+                </ul><br>
+                <li>"Personal Note" is Used to Store your Thoughts or Importants works like a personal disary</li>
+                <ul>
+                    <li>You can Add your Notes It was Created on the basis of your date created</li>
+                    <li>If you want you can Update or Delete Notes</li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="box">
+            <h2>Source Code:</h2>
+            <img src="https://cdn3.iconfinder.com/data/icons/inficons/512/github.png" alt="github"><br>
+            <a href="https://github.com/Jaswanth-Kumar-2007/CSL100_Project" target="_blank">CSL Project Github</a><br><br>
+            <p> ⭐ Star the Repository</p>
         </div>
     </div>
     <footer>
